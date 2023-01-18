@@ -1,0 +1,44 @@
+Q.1. Given two integer d and n. Where d is the day, out of 7 days of week, d varies from 0 to 6 as shown below.
+
+0 - Sunday
+
+1 - Monday
+
+2 - Tuesday
+
+3 - Wednesday
+
+4 - Thursday
+
+5 - Friday
+
+6 - Saturday
+
+Complete the function utility() with d and n as parameters. Print index for the day which is n days before the given day d.
+
+
+package com.gradle.demo;
+import java.net.SocketOption;
+import java.util.Scanner;
+public class gfg_questions
+{
+    public static void utility(int d, int n)
+    {
+        n = n % 7;
+        if(d-n >= 0)
+        {
+            System.out.println(d-n);
+        }
+        else
+        {
+            System.out.println(d-n+7);
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int d = sc.nextInt();
+        int n = sc.nextInt();
+        utility(d,n);
+    }
+}
