@@ -1,0 +1,57 @@
+package Practice;
+
+import java.util.Scanner;
+
+class calc
+{
+    void sum(double a, double b)
+    {
+        double result = a+b;
+        System.out.println("The sum of " + a + " and" + b + " is:- " + result);
+    }
+    void sub(double a, double b)
+    {
+        double result = a-b;
+        System.out.println("The subtraction of " + a + " and " + b + " is:- " + result);
+    }
+    void mul(double a, double b)
+    {
+        double result = a*b;
+        System.out.println("The multiplication of " + a + " and" + b + " is:- " + result);
+    }
+    void div(double a, double b)
+    {
+        double result = a/b;
+        System.out.println("The division of " + a + " and" + b + " is:- " + result);
+    }
+}
+public class calculator
+{
+    public static void main(String args[])
+    {
+        char operator;
+        double a, b;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Choose the operations {'+','-','*','/'} you want to perform:- ");
+        operator = input.next().charAt(0);
+        System.out.println("Enter the first number:- ");
+        a = input.nextInt();
+        System.out.println("Enter the second number:- ");
+        b = input.nextInt();
+        calc obj = new calc();
+        switch (operator)
+        {
+            case '+': obj.sum(a,b);
+                        break;
+            case '-': obj.sub(a,b);
+                        break;
+            case '*': obj.mul(a,b);
+                        break;
+            case '/': obj.div(a,b);
+                        break;
+            default : System.out.println("Invalid operator");
+                        break;
+        }
+        input.close();
+    }
+}
