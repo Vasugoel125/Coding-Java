@@ -1,0 +1,13 @@
+package com.gradle.demo;
+import java.net.SocketOption;
+import java.util.Scanner;
+public class gfg_questions
+{
+    public static void main(String args[])
+    {
+        int x = -23;
+        int y = Math.abs(x);
+        int ans = y % 10;
+        System.out.println(ans);
+    }
+}
