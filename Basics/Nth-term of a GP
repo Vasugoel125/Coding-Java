@@ -1,0 +1,24 @@
+package com.gradle.demo;
+import java.net.SocketOption;
+import java.util.Scanner;
+public class gfg_questions
+{
+    public static int nthterm(int a,int n,int r)
+    {
+        int power = n-1;
+        int ans = a * (int) Math.pow(r,power);
+        return ans;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = 2;
+        int r = 3;
+        int n = 5;
+//        int a = sc.nextInt();
+//        int n = sc.nextInt();
+//        int d = sc.nextInt();
+        int result = nthterm(a,n,r);
+        System.out.println(result);
+    }
+}
